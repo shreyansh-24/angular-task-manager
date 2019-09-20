@@ -15,30 +15,29 @@ export class CardBucketComponent implements OnInit, OnChanges {
 
 
   public toDo: any = [
-    'Mock To Do List Item 1',
-    'Mock To Do List Item 2',
-    'Mock To Do List Item 3',
-    'Mock To Do List Item 4',
-    'Mock To Do List Item 5',
-    'Mock To Do List Item 6'
+    'Complete mock-up for client website',
+    'Email mock-up to client for feedback',
+    'Update personal website header background image',
+    'Update personal website heading fonts',
+    'Add google map to personal website',
+    'Begin draft of CSS Grid article',
+    'Read new CSS-Tricks articles',
   ];
 
   public doing: any = [
-    'Mock ongoing list item 1',
-    'Mock ongoing list item 2',
-    'Mock ongoing list item 3',
-    'Mock ongoing list item 4',
-    'Mock ongoing list item 5',
-    'Mock ongoing list item 6'
+    'Read new Smashing Magazine articles',
+    'Read other bookmarked articles',
+    'Look through portfolios to gather inspiration',
+    'Create something cool for CodePen',
+    'Post latest CodePen work on Twitter',
+
   ];
 
   public done: any = [
     'Mock completed list item 1',
     'Mock completed list item 2',
-    'Mock completed list item 3',
-    'Mock completed list item 4',
-    'Mock completed list item 5',
-    'Mock completed list item 6'
+    'Listen to new Syntax.fm episode',
+    'Listen to new CodePen Radio episode'
   ];
 
   public toDoValue: string;

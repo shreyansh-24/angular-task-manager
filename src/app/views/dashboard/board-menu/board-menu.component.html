@@ -22,6 +22,9 @@
       aria-hidden="true"></i>Show Menu</button>
   <mat-menu #menu="matMenu">
     <div class="menu-cards">
+      <p class="para-top" mat-menu-item>
+        Menu
+      </p>
       <ul mat-menu-item class="img-ul">
         <li>
           <img src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50" alt="">
@@ -43,7 +46,7 @@
         <mat-icon>local_pizza</mat-icon>
         <span>Filter Cards</span>
       </button>
-      <button mat-menu-item>
+      <button mat-menu-item [matMenuTriggerFor]="colors">
         <mat-icon>turned_in</mat-icon>
         <span>Change Background</span>
       </button>
@@ -51,5 +54,11 @@
 
     </div>
   </mat-menu>
+  <mat-menu #colors="matMenu">
+    <button mat-menu-item>Color A</button>
+    <button mat-menu-item>Color B</button>
+    <button mat-menu-item>Color C</button>
+  </mat-menu>
+
 
 </section>
