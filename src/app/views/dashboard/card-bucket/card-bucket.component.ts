@@ -48,10 +48,6 @@ export class CardBucketComponent implements OnInit, OnChanges {
   constructor() { }
 
   ngOnInit() {
-    console.log('to do list : ', this.toDo);
-    console.log('doing list : ', this.doing);
-    console.log('completed list : ', this.done);
-    console.log('team name in bucket ==== ', this.teamName);
     this.showHideTeams = 'visible';
   }
   ngOnChanges(changes: SimpleChanges) {
@@ -66,9 +62,7 @@ export class CardBucketComponent implements OnInit, OnChanges {
         event.previousIndex,
         event.currentIndex);
     }
-    console.log('to do list : ', this.toDo);
-    console.log('doing list : ', this.doing);
-    console.log('completed list : ', this.done);
+
   }
 
   addActionItem(boardName: any) {
