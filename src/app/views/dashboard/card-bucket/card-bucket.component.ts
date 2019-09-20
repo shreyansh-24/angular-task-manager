@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 
 @Component({
@@ -6,10 +6,12 @@ import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/dr
   templateUrl: './card-bucket.component.html',
   styleUrls: ['./card-bucket.component.css']
 })
-export class CardBucketComponent implements OnInit {
+export class CardBucketComponent implements OnInit, OnChanges {
   public todoActive: any = false;
   public doingActive: any = false;
   public completedActive: any = false;
+  @Input() teamName: any;
+  public showHideTeams: string;
 
 
   public toDo: any = [
@@ -50,6 +52,11 @@ export class CardBucketComponent implements OnInit {
     console.log('to do list : ', this.toDo);
     console.log('doing list : ', this.doing);
     console.log('completed list : ', this.done);
+    console.log('team name in bucket ==== ', this.teamName);
+    this.showHideTeams = 'visible';
+  }
+  ngOnChanges(changes: SimpleChanges) {
+    this.showHideTeams = changes.teamName.currentValue;
   }
   drop(event: CdkDragDrop<string[]>) {
     if (event.previousContainer === event.container) {

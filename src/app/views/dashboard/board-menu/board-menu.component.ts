@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-board-menu',
@@ -7,9 +7,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BoardMenuComponent implements OnInit {
 
+  public teamFlag: any = 'test';
+
+  @Output() sendTeamFlag = new EventEmitter();
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  teamClicked(teamFlag: any) {
+    if (teamFlag === 'visible') {
+      this.teamFlag = teamFlag;
+    }
+    if (teamFlag === 'awesome') {
+      this.teamFlag = teamFlag;
+
+    }
+    this.sendTeamFlag.emit(this.teamFlag);
   }
 
 }

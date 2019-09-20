@@ -9,9 +9,12 @@ Flexbox is used as a fallback so that browsers which don't support grid will sti
 */
 
 /* Base styles */
-
 :root {
   font-size: 10px;
+}
+
+.menu-cards {
+  width: 500px;
 }
 
 *,
@@ -179,6 +182,7 @@ body {
   padding: 0 0.6rem;
   border-radius: 0.3rem;
   height: 3rem;
+  margin-left: 888px;
 }
 
 .board-info-bar .btn:hover {
@@ -383,4 +387,17 @@ Remove or comment-out the code block below to see how the browser will fall-back
   .user-settings-btn {
       margin: 0;
   }
+}
+
+.img-ul {
+  list-style: none;
+}
+.img-ul img {
+  border-radius: 100%;
+  width: 36px;
+  padding: 0 3px;
+}
+
+.img-ul li {
+  float: left;
 }

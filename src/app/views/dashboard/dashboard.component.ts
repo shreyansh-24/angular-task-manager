@@ -9,7 +9,15 @@ export class DashboardComponent implements OnInit {
 
   constructor() { }
 
+
+  public flagData: any;
+
   ngOnInit() {
+  }
+
+  getFlagData($event) {
+    this.flagData = $event;
+    console.log('flag data in parent =====', this.flagData);
   }
 
 }

@@ -6,16 +6,50 @@
       <h2>Things to get done</h2>
     </button>
 
-    <button class="star-btn btn" aria-label="Star Board">
-      <i class="far fa-star" aria-hidden="true"></i>
+    <button class="star-btn btn" aria-label="Star Board" (click)="teamClicked('awesome')">
+      <i class="far fa-star" aria-hidden="true"></i>Team Awesome
     </button>
 
-    <button class="personal-btn btn">Personal</button>
+    <!-- <button class="personal-btn btn">Team Awesome</button> -->
 
-    <button class="private-btn btn"><i class="fas fa-briefcase private-btn-icon" aria-hidden="true"></i>Private</button>
+    <button class="private-btn btn" (click)="teamClicked('visible')"><i class="fas fa-briefcase private-btn-icon"
+        aria-hidden="true"></i>Team
+      Visible</button>
 
   </div>
 
-  <button class="menu-btn btn"><i class="fas fa-ellipsis-h menu-btn-icon" aria-hidden="true"></i>Show Menu</button>
+  <button mat-button [matMenuTriggerFor]="menu" class="menu-btn btn"><i class="fas fa-ellipsis-h menu-btn-icon"
+      aria-hidden="true"></i>Show Menu</button>
+  <mat-menu #menu="matMenu">
+    <div class="menu-cards">
+      <ul mat-menu-item class="img-ul">
+        <li>
+          <img src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50" alt="">
+        </li>
+        <li>
+          <img src="https://www.w3schools.com/howto/img_avatar.png" alt="">
+        </li>
+        <li>
+          <img src="https://www.w3schools.com/howto/img_avatar2.png" alt="">
+        </li>
+        <li>
+          <img src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50" alt="">
+        </li>
+        <li>
+          <img src="https://www.w3schools.com/howto/img_avatar.png" alt="">
+        </li>
+      </ul>
+      <button mat-menu-item>
+        <mat-icon>local_pizza</mat-icon>
+        <span>Filter Cards</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>turned_in</mat-icon>
+        <span>Change Background</span>
+      </button>
+
+
+    </div>
+  </mat-menu>
 
 </section>
